@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "skills": "Skills",
+    "languages": "Languages",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hello, I'm",
+    "role": "Full Stack Developer",
+    "description": "I create beautiful and functional web applications with a focus on user experience."
+  },
+  "projects": {
+    "title": "Projects",
+    "viewProject": "View Project"
+  },
+  "skills": {
+    "title": "Skills",
+    "frontend": "Frontend Development",
+    "backend": "Backend Development",
+    "tools": "Tools & Technologies"
+  },
+  "languages": {
+    "title": "Languages",
+    "english": "English",
+    "arabic": "Arabic"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message"
+  }
+}
