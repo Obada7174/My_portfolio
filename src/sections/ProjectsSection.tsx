@@ -5,27 +5,27 @@ import { ProjectCard } from '../components/ProjectCard';
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce platform with React, Node.js, and MongoDB',
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&q=80',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
-    githubUrl: 'https://github.com',
+    title: 'Delivery application',
+    description: 'An app that displays products to the user, enabling them to choose any product to be delivered to their home without having to shop manually.The market is at your fingertips. with flutter, laravel, and Mysql',
+    image: '../images/8bcbpa76.png',
+    technologies: ['laravel', ' API', 'flutter', 'Mysql'],
+    githubUrl: 'https://github.com/fadi9p9/Delivery_man0.1',
     liveUrl: 'https://example.com'
   },
   {
     title: 'Task Management App',
-    description: 'A collaborative task management application with real-time updates',
-    image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80',
-    technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
-    githubUrl: 'https://github.com',
+    description: 'In this application you can see the movies that will be shown in the cinema, you can see a description of the movie that will be shown, at what time, and the ticket price, and you can reserve a specific number of tickets.',
+    image: '../images/cinema.png',
+    technologies: ['java', 'GUI', 'without database'],
+    githubUrl: 'https://github.com/fadi9p9/Cinema_Reservations_Management_usingJava',
     liveUrl: 'https://example.com'
   },
   {
-    title: 'Weather Dashboard',
-    description: 'A weather dashboard with interactive maps and forecasts',
-    image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&w=800&q=80',
-    technologies: ['React', 'OpenWeather API', 'Chart.js'],
-    githubUrl: 'https://github.com',
+    title: 'job opportunity',
+    description: 'An application that allows users to search for job opportunities that match their skills through suggestions or manual search, or allows companies to search for employees with the necessary skills to satisfy everyone.',
+    image: '../images/laravel-featured.avif',
+    technologies: ['laravel', ' API', 'Mysql'],
+    githubUrl: 'https://github.com/Obada7174/job-opportunity',
     liveUrl: 'https://example.com'
   },
   
