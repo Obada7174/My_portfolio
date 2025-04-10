@@ -2,9 +2,10 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Twitter, Mail, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser'; // أضف هذه المكتبة
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
+  { icon: Github, href: 'https://github.com/fadi9p9', label: 'GitHub' },
   { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
   { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
   { icon: Mail, href: 'mailto:your.email@example.com', label: 'Email' }
@@ -12,10 +13,23 @@ const socialLinks = [
 
 export function ContactSection() {
   const { t } = useTranslation();
+  const form = React.useRef();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
+
+    emailjs.sendForm(
+      'service_zta1l1e', // استبدل هذا بـ Service ID
+      'template_9bg2qbp', // استبدل هذا بـ Template ID
+      form.current,
+      '1RGCQGGLiicPsakSC' // استبدل هذا بـ Public Key
+    )
+    .then((result) => {
+      alert(t('contact.successMessage'));
+      form.current.reset();
+    }, (error) => {
+      alert(t('contact.errorMessage'));
+    });
   };
 
   return (
@@ -32,33 +46,10 @@ export function ContactSection() {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12">
-          <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h3 className="text-xl font-semibold mb-6 text-gray-900 dark:text-white">
-              {t('contact.getInTouch')}
-            </h3>
-            <div className="flex flex-wrap gap-4">
-              {socialLinks.map(({ icon: Icon, href, label }) => (
-                <motion.a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <Icon className="w-6 h-6" />
-                </motion.a>
-              ))}
-            </div>
-          </motion.div>
+          {/* ... الجزء الخاص بالروابط الاجتماعية يبقى كما هو ... */}
 
           <motion.form
+            ref={form} // أضف هذا المرجع
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -73,7 +64,9 @@ export function ContactSection() {
               <input
                 type="text"
                 id="name"
+                name="name" // أضف name attribute
                 className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 outline-none transition-shadow"
+                required
               />
             </div>
             <div>
@@ -83,7 +76,9 @@ export function ContactSection() {
               <input
                 type="email"
                 id="email"
+                name="email" // أضف name attribute
                 className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 outline-none transition-shadow"
+                required
               />
             </div>
             <div>
@@ -92,8 +87,10 @@ export function ContactSection() {
               </label>
               <textarea
                 id="message"
+                name="message" // أضف name attribute
                 rows={4}
                 className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 outline-none transition-shadow"
+                required
               />
             </div>
             <motion.button
