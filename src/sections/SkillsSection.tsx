@@ -8,39 +8,40 @@ const skills = [
   {
     title: 'Frontend Development',
     icon: Code2,
-    level: 90,
+    level: 10,
     color: 'bg-blue-500'
   },
   {
     title: 'Backend Development',
     icon: Server,
-    level: 85,
+    level: 55,
     color: 'bg-green-500'
   },
   {
     title: 'Database Management',
     icon: Database,
-    level: 80,
+    level: 30,
     color: 'bg-purple-500'
   },
   {
     title: 'UI/UX Design',
     icon: Palette,
-    level: 75,
+    level: 40,
     color: 'bg-pink-500'
   },
   {
     title: 'DevOps',
     icon: Terminal,
-    level: 70,
+    level: 0,
     color: 'bg-orange-500'
   },
   {
     title: 'Web Security',
     icon: Globe,
-    level: 85,
+    level: 20,
     color: 'bg-red-500'
   }
+  
 ];
 
 export function SkillsSection() {

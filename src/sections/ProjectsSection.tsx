@@ -27,7 +27,8 @@ const projects = [
     technologies: ['React', 'OpenWeather API', 'Chart.js'],
     githubUrl: 'https://github.com',
     liveUrl: 'https://example.com'
-  }
+  },
+  
 ];
 
 export function ProjectsSection() {
