@@ -18,9 +18,12 @@ export function Header() {
 
   return (
     <motion.header 
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 shadow-md"
+      // initial={{ y: -100 }}
+      // animate={{ y: 0 }}S
+      // className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 shadow-md"
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <nav className="flex space-x-6 rtl:space-x-reverse">
