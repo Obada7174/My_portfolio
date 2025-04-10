@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { ProjectCard } from '../components/ProjectCard';
@@ -10,7 +9,7 @@ const projects = [
     image: '../images/8bcbpa76.png',
     technologies: ['laravel', ' API', 'flutter', 'Mysql'],
     githubUrl: 'https://github.com/fadi9p9/Delivery_man0.1',
-    liveUrl: 'https://example.com'
+    // liveUrl: 'https://example.com'
   },
   {
     title: 'Task Management App',
@@ -18,7 +17,7 @@ const projects = [
     image: '../images/cinema.png',
     technologies: ['java', 'GUI', 'without database'],
     githubUrl: 'https://github.com/fadi9p9/Cinema_Reservations_Management_usingJava',
-    liveUrl: 'https://example.com'
+    // liveUrl: 'https://example.com'
   },
   {
     title: 'job opportunity',
@@ -26,7 +25,7 @@ const projects = [
     image: '../images/laravel-featured.avif',
     technologies: ['laravel', ' API', 'Mysql'],
     githubUrl: 'https://github.com/Obada7174/job-opportunity',
-    liveUrl: 'https://example.com'
+    // liveUrl: 'https://example.com'
   },
   
 ];

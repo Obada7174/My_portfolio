@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import  { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Header } from './components/Header';
 import { ScrollProgress } from './components/ScrollProgress';
@@ -20,7 +20,7 @@ function App() {
       <ScrollProgress />
       <Header />
       
-      <main className="container px-4 pt-20 mx-auto">
+      <main className="container px-4 pt mx-auto">
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
